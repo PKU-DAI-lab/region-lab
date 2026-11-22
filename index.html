@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="观看 Region Lab 足球三维沙盘演示，了解比赛回放、球员姿态和场上空间分析。">
+  <meta name="theme-color" content="#112f26">
+  <title>足球三维沙盘 · Region Lab</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="./" lang="en" aria-label="Region Lab 首页"><span class="brand-mark" aria-hidden="true"><i></i></span>Region<span class="brand-lab">Lab</span></a>
+      <nav aria-label="页面导航"><a href="#football">足球演示</a><a href="#live">实时访问</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="football" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-kicker">Region Lab 三维平台</p>
+          <h1 id="hero-title">足球三维沙盘</h1>
+          <p class="hero-desc">在一块三维球场上，跟随足球的移动，观察球员姿态与两队阵形。</p>
+          <div class="hero-actions"><a class="play" href="./assets/demo.webm" id="play-demo"><i aria-hidden="true"></i>观看演示</a><span>预录短片 · 合成练习数据</span></div>
+        </div>
+      </div>
+    </section>
+    <div class="details">
+      <section class="features" aria-labelledby="features-title">
+        <h2 id="features-title">沙盘功能</h2>
+        <dl>
+          <div><dt>比赛回放</dt><dd>沿时间轴逐帧观察球员和足球的位置，切换镜头查看跑动路线。</dd></div>
+          <div><dt>球员姿态</dt><dd>选中球员查看关节，区分追踪数据中的实测姿态与补充显示的示意动作。</dd></div>
+          <div><dt>战术分析</dt><dd>将攻防阶段、动态事件与场上站位放在同一时刻比较。</dd></div>
+        </dl>
+      </section>
+      <section class="live" id="live" aria-labelledby="live-title">
+        <div class="live-heading"><h2 id="live-title">实时沙盘</h2><span class="status">未开放</span></div>
+        <p>实时场景由实验室电脑提供。公共访客入口暂未开放，演示短片可随时播放。</p>
+      </section>
+    </div>
+  </main>
+  <dialog id="demo-dialog" aria-labelledby="demo-title">
+    <div class="player-head"><h2 id="demo-title">足球沙盘演示</h2><button id="close-demo" type="button">关闭</button></div>
+    <video id="demo-video" controls playsinline preload="none" aria-label="足球三维沙盘预录演示">
+      <source src="./assets/demo.webm" type="video/webm">
+      <a href="./assets/demo.webm">打开演示短片</a>
+    </video>
+    <p id="video-error" hidden role="status">浏览器未能播放短片。<a href="./assets/demo.webm">打开视频文件</a></p>
+  </dialog>
+</body>
+</html>
